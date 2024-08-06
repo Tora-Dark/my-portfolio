@@ -18,10 +18,17 @@ export default function WorkSection() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter text-sky-400/100 sm:text-5xl">
+            <h1
+              className="md:text-3xl md:inline   bg-clip-text text-transparent text-2xl content-center  justify-center place-content-center font-bold animate__animated animate__flash tracking-tighter sm:text-5xl ease-in-out duration-700 hover:neon-blue transition-all text-sky-500 hover:text-white xl:text-6xl/none"
+              style={{
+                backgroundImage:
+                  'url("./assets/classy-fabric.png"), linear-gradient(to right, #6366f1, #14b8a6)',
+              }}
+            >
               My Work
-            </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            </h1>
+
+            <p className="max-w-[900px]  md:text-xl/relaxed  text-blue-300 lg:text-base/relaxed xl:text-xl/relaxed">
               Check out some of my recent projects and case studies.
             </p>
           </div>
@@ -45,7 +52,8 @@ const projects = [
   {
     id: 1,
     title: "Web Application for Teacher Schedule Management",
-    description: "Implementation of a schedule management system with authentication and realtime data handling.",
+    description:
+      "Implementation of a schedule management system with authentication and realtime data handling.",
     imageSrc: "/imgs/image2.png",
     imageAlt: "Project 1",
     link: "#",
@@ -53,14 +61,16 @@ const projects = [
   {
     id: 2,
     title: "Organization Information Management System in Cuba",
-    description: "Development of a comprehensive system for managing organizational information, including administration and reporting features.",
+    description:
+      "Development of a comprehensive system for managing organizational information, including administration and reporting features.",
     imageSrc: "/imgs/image1.png",
     imageAlt: "Project 2",
     link: "#",
   },
   {
     id: 3,
-    title: "Guidance Manual for the Education of Deaf Children with Cochlear Implants",
+    title:
+      "Guidance Manual for the Education of Deaf Children with Cochlear Implants",
     description:
       "Development of a blog platform with modern features and responsive design.",
     imageSrc: "/imgs/image.png",
