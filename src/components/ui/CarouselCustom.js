@@ -3,12 +3,22 @@ import React, { useState } from "react";
 import "animate.css";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowBigLeft } from "lucide-react";
+import {
+  ArrowBigLeft,
+  ChevronsLeft,
+  ChevronsRight,
+  FastForward,
+  PanelLeftClose,
+  PanelRightClose,
+  Rewind,
+} from "lucide-react";
 import { ArrowLeftIcon } from "lucide-react";
+
 import { ArrowRightIcon } from "lucide-react";
 import { Button } from "@nextui-org/react";
 import { ImagePlay } from "lucide-react";
 import { MonitorPlay } from "lucide-react";
+
 const Carousel = ({ projects }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [project, setProject] = useState(projects[0]);
@@ -58,17 +68,17 @@ const Carousel = ({ projects }) => {
         <div className="flex justify-between mt-8">
           <button
             onClick={handlePrevious}
-            className="inline-flex gap-2 h-10 items-center justify-center text-sky-300 hover:shadow-neon-blue hover:bg-slate-300 hover:text-slate-800 rounded-2xl bg-indigo-950 shadow-slate-950 px-8 text-sm font-medium text-primary-foreground shadow duration-500 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            className="inline-flex gap-2 w-12 h-12 md:w-16 md:h-16 items-center justify-center rounded-full bg-primary hover:text-indigo-500 hover:shadow-neon-indigo shadow-slate-950 text-sky-300 text-2xl font-medium hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring transition-all duration-500 ease-in-out"
           >
-            <ArrowLeftIcon />
-            Previous
+            <Rewind />
+            {/*    Previous */}
           </button>
           <button
             onClick={handleNext}
-            className="inline-flex gap-2 h-10 items-center justify-center text-sky-300 hover:shadow-neon-blue hover:bg-slate-300 hover:text-slate-800 rounded-2xl bg-indigo-950 shadow-slate-950 px-8 text-sm font-medium text-primary-foreground shadow duration-500 transition-all hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            className="inline-flex gap-2 w-12 h-12 md:w-16 md:h-16 items-center justify-center rounded-full bg-primary hover:text-indigo-500 hover:shadow-neon-indigo shadow-slate-950 text-sky-300 text-2xl font-medium hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring transition-all duration-500 ease-in-out"
           >
-            Next
-            <ArrowRightIcon />
+            {/*  Next */}
+            <FastForward />
           </button>
         </div>
       </div>

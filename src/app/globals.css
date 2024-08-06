@@ -151,6 +151,7 @@
   color: #f43f5e;
   text-shadow: 0 0 5px #f43f5e, 0 0 10px #f43f5e, 0 0 15px #f43f5e, 0 0 20px #f43f5e;
 }
+
     .dark {
       --background: 222.2 84% 4.9%;
       --foreground: 210 40% 98%;
