@@ -24,7 +24,7 @@ export default function Home() {
     <NextUIProvider>
       <div className="flex flex-col min-h-[100dvh]">
         <main
-          className="flex-1 bg-gradient-to-b from-slate-950 to-blue-950"
+          className="flex-1 bg-gradient-to-b overflow-hidden from-slate-950 to-blue-950"
           // In your main `Home` component and any other component that uses background images
           style={{
             backgroundImage:
@@ -38,7 +38,7 @@ export default function Home() {
             <WorkExperience />
             <Education />
             {/*    <AboutMe /> */}
-          <ContactSection />
+          <ContactSection className=""/>
           </TracingBeam>
         </main>
       </div>
