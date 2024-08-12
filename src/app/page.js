@@ -38,8 +38,8 @@ export default function Home() {
             <WorkExperience />
             <Education />
             {/*    <AboutMe /> */}
-          </TracingBeam>
           <ContactSection />
+          </TracingBeam>
         </main>
       </div>
     </NextUIProvider>

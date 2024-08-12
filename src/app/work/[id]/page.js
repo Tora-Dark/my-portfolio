@@ -9,6 +9,7 @@ import Link from "next/link";
 import { FaReact, FaLaravel } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
 import { ArrowUpRightFromSquareIcon } from "lucide-react";
+import { RiNextjsFill } from "react-icons/ri";
 
 const projects = [
   {
@@ -16,12 +17,35 @@ const projects = [
     title: "Web Application for Teacher Schedule Management",
     description: "Implementation of a schedule management system with authentication and realtime data handling.",
     technologies: [
-      { name: "React", icon: <FaReact /> },
+      { name: "React.js", icon: <FaReact /> },
       { name: "Laravel", icon: <FaLaravel /> },
     ],
     imageSrc: "/imgs/image2.png",
     imageAlt: "Project 1",
     link: "#",
+  },
+  {
+    id: 2,
+    title: "Organization Information Management System in Cuba",
+    description: "Development of a comprehensive system for managing organizational information, including administration and reporting features.",
+    technologies: [
+      { name: "Laravel", icon: <FaLaravel /> },
+    ],
+    imageSrc: "/imgs/image1.png",
+    imageAlt: "Project 2",
+    link: "#",
+  },
+  {
+    id: 3,
+    title: "Guidance Manual for the Education of Deaf Children with Cochlear Implants",
+    description: "Development of a blog platform with modern features and responsive design.",
+    technologies: [
+      { name: "React.js", icon: <FaReact /> },
+      { name: "Next.js", icon: <RiNextjsFill /> },
+    ],
+    imageSrc: "/imgs/image.png",
+    imageAlt: "Project 1",
+    link: "https://blog-claudia.vercel.app/",
   },
   // More projects...
 ];
