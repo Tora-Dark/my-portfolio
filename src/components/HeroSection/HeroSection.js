@@ -3,17 +3,20 @@ import "animate.css";
 import { ArrowDownRightFromSquareIcon } from "lucide-react";
 import Image from "next/image";
 import Gif from "/public/assets/wired-lineal-742-code.gif";
+import { LocateIcon } from "lucide-react";
+import { LocateFixedIcon } from "lucide-react";
+import { SiGooglemaps } from "react-icons/si";
 
 export default function HeroSection() {
   return (
     <section className="w-full flex py-12 space-x-4 md:py-24 bg-transparent lg:py-32">
       <div className="container flex flex-col md:flex-row justify-center items-center md:space-x-6 space-y-6 md:space-y-0 px-4 md:px-6 gap-2">
-          <div className="flex flex-col justify-center items-center place-content-center gap-4">
+          <div className="flex flex-col md:justify-start md:items-start md:place-content-start justify-center items-center place-content-center gap-4">
         <div className="flex flex-row items-center md:gap-2 ">
 
 
           {/* GIF pequeño al lado izquierdo del nombre */}
-          <div className="w-10 h-full md:w-14 justify-center place-content-center rounded-full items-center md:h-14 flex-shrink-0 mr-4">
+          <div className="w-10 h-full md:w-14  place-content-center rounded-full items-center md:h-14 flex-shrink-0 mr-4">
             <Image
               src={Gif.src}
               alt="IT Developer GIF"
@@ -48,9 +51,9 @@ export default function HeroSection() {
           Get in Touch
         </Link>
         </div>
-        <div className="aspect-square"
+        <div className="aspect-square flex flex-col justify-center items-center place-content-center"
             >
-          <div className="flex  justify-center items-center w-72 h-full outline outline-offset-4 transition-all overflow-hidden duration-700  hover:text-indigo-500 rounded-full hover:shadow-neon-indigo text-sky-300 px-4 py-2"
+          <div className="flex  justify-center items-center w-72 h-full my-8 outline outline-offset-4 transition-all overflow-hidden duration-700  hover:text-indigo-500 rounded-full hover:shadow-neon-indigo text-sky-300 px-4 py-2"
         
         style={{
           backgroundImage:
@@ -64,8 +67,13 @@ export default function HeroSection() {
             height={400}
             alt="Hero"
             className=" rounded-full  text-white outline outline-offset-2 scale-125  "
+           
             />
             </div>
+
+            <span className="text-sky-500 flex flex-row text-2xl  gap-2">
+              <SiGooglemaps className="animate animate-pulse"/>
+              La Habana, Cuba</span>
         </div>
       </div>
     </section>

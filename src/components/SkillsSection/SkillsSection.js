@@ -237,9 +237,9 @@ function SkillCard({ skill }) {
                 key={techIndex}
                 className="flex gap-2 justify-between pb-3 items-center place-content-center text-sky-500"
               >
-                <div className="flex flex-row transition-all duration-100 ease-in-out hover:neon-blue hover:text-white">
-                  <span className="font-semibold text-md">{tech.name}</span>
+                <div className="flex flex-row transition-all gap-2 duration-100 ease-in-out  hover:text-white">
                   <span className="pl-2">{tech.icon}</span>
+                  <span className="font-semibold text-md">{tech.name}</span>
                 </div>
                 {renderStars(tech.rating)}
               </li>
