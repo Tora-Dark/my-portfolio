@@ -78,7 +78,7 @@ export default function ContactSection() {
                 <FaGithub />
               </Link>
               <Link
-                href="https://www.linkedin.com/in/yourprofile"
+                href="https://www.linkedin.com/in/alejandro-romero-martinez-75588a281"
                 className="inline-flex gap-2 w-12 h-12 md:w-16 md:h-16 items-center justify-center rounded-full bg-primary hover:text-indigo-500 hover:shadow-neon-indigo shadow-slate-950 text-sky-300 text-2xl font-medium hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring transition-all duration-500 ease-in-out"
               >
                 <Linkedin />
@@ -90,7 +90,7 @@ export default function ContactSection() {
                 <Mail />
               </Link>
               <Link
-                href="https://t.me/yourusername"
+                href="https://t.me/AlejoRo"
                 className="inline-flex gap-2 w-12 h-12 md:w-16 md:h-16 items-center justify-center rounded-full bg-primary hover:text-indigo-500 hover:shadow-neon-indigo shadow-slate-950 text-sky-300 text-2xl font-medium hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring transition-all duration-500 ease-in-out"
               >
                 <FaTelegramPlane />
