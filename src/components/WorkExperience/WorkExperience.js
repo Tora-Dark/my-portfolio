@@ -1,9 +1,11 @@
 import { BackpackIcon } from "lucide-react";
 import { ServerCogIcon } from "lucide-react";
+import { UniversityIcon } from "lucide-react";
 import { MonitorSmartphone } from "lucide-react";
 import { LucideVenetianMask } from "lucide-react";
 import { Briefcase } from "lucide-react";
 import { FaBackspace } from "react-icons/fa";
+
 const workExperience = [
   {
     title: "Frontend Developer",
@@ -34,6 +36,16 @@ const workExperience = [
     ],
     icon: <MonitorSmartphone className="text-sky-400 mb-2 mx-auto" size={36} />,
   },
+  {
+    title: "Programming Instructor in Java at the University of Informatic Sciences",
+    projects: [
+      "Data Structures",
+      "Good Programming Practices",
+      "Clean Code",
+      "SOLID Principles",
+    ],
+    icon: <UniversityIcon className="text-sky-400 mb-2 mx-auto" size={36} />,
+  },
 ];
 
 export default function WorkExperienceSection() {
@@ -47,7 +59,7 @@ export default function WorkExperienceSection() {
                 className="md:text-3xl md:inline   bg-clip-text text-transparent text-2xl content-center  justify-center place-content-center font-bold animate__animated animate__flash tracking-tighter sm:text-5xl ease-in-out duration-700 hover:neon-blue transition-all text-sky-500 hover:text-white xl:text-6xl/none"
           style={{
             backgroundImage:
-              'url("./assets/classy-fabric.png"), linear-gradient(to right, #6366f1, #14b8a6)',
+              'url("/assets/classy-fabric.png"), linear-gradient(to right, #6366f1, #14b8a6)',
           }}
         >
           Work Experience
@@ -59,7 +71,7 @@ export default function WorkExperienceSection() {
               className="bg-gradient-to-r from-indigo-950 to-black outline outline-offset-4 hover:outline-offset-0 outline-indigo-500 p-4 rounded-xl shadow-lg hover:shadow-neon-indigo transition-all duration-500"
               style={{
                 backgroundImage:
-                  'url("./assets/classy-fabric.png"), linear-gradient(to bottom, #1e1b4b,  #020617)',
+                  'url("/assets/classy-fabric.png"), linear-gradient(to bottom, #1e1b4b,  #020617)',
               }}
             >
               {work.icon}

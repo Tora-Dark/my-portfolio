@@ -1,6 +1,8 @@
-import { GraduationCap } from "lucide-react";
 import { FaUserGraduate } from "react-icons/fa";
 import { TbUserUp } from "react-icons/tb";
+
+// Importa el GIF
+
 const education = [
   {
     degree: "Engineer in Informatic Sciences",
@@ -27,10 +29,15 @@ export default function EducationSection() {
           className="md:text-3xl md:inline   bg-clip-text text-transparent text-2xl content-center  justify-center place-content-center font-bold animate__animated animate__flash tracking-tighter sm:text-5xl ease-in-out duration-700 hover:neon-blue transition-all text-sky-500 hover:text-white xl:text-6xl/none"
           style={{
             backgroundImage:
-              'url("./assets/classy-fabric.png"), linear-gradient(to right, #6366f1, #14b8a6)',
-          }} >
+              'url("/assets/classy-fabric.png"), linear-gradient(to right, #6366f1, #14b8a6)',
+          }}
+        >
           Education
         </h2>
+
+        {/* Agrega el GIF aquí */}
+{/*         <img src={Gif.src} alt="IT Developer GIF" className="w-64 h-64 mx-auto my-4" /> */}
+
         <div className="max-w-[800px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10  text-blue-300 md:text-xl animate__animated animate__fadeIn">
           {education.map((edu, index) => (
             <div
@@ -38,7 +45,7 @@ export default function EducationSection() {
               className="flex flex-col items-center bg-gradient-to-r text-cyan-100 from-sky-600 to-blue-800  hover:bg-slate-100 p-4 rounded-xl shadow-xl hover:shadow-neon-cyan  shadow-slate-950 transition-all duration-500 w-full h-full"
               style={{
                 backgroundImage:
-                  'url("./assets/classy-fabric.png"), linear-gradient(to right, #0284c7, #1e3a8a)',
+                  'url("/assets/classy-fabric.png"), linear-gradient(to right, #1e3a8a, #0284c7)',
               }}
             >
               {edu.icon}

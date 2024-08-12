@@ -16,7 +16,7 @@ export default function AboutSection() {
           className="max-w-[800px] bg-repeat  overflow-hidden rounded-xl hover:shadow-neon-indigo transition-all shadow-lg shadow-slate-950 duration-500 text-blue-100 md:text-xl animate__animated animate__fadeIn space-y-4"
           style={{
             backgroundImage:
-                  'url("./assets/classy-fabric.png"), linear-gradient(to right, #0284c7, #1e3a8a)',
+                  'url("/assets/classy-fabric.png"), linear-gradient(to right, #0284c7, #1e3a8a)',
           }}
         >
           {aboutMe.map((text, index) => (
