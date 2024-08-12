@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 
 const useScrollAnimation = (animationClass) => {
   const [isAnimated, setIsAnimated] = useState(false);
-  const ref = useRef(null);
+  const ref = useRef(null); // Declaración única de ref
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -14,16 +14,18 @@ const useScrollAnimation = (animationClass) => {
       { threshold: 0.1 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    const currentRef = ref.current; // Guardamos el valor actual de ref.current
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
-  }, []);
+  }, [ref]); // Asegúrate de pasar ref como dependencia si es necesario
 
   return [ref, isAnimated ? animationClass : ''];
 };

@@ -11,6 +11,7 @@ import { FaUser, FaUserTie } from "react-icons/fa6";
 import { UserCircle } from "lucide-react";
 import { SiSuperuser } from "react-icons/si";
 import { IoCloudDownloadSharp } from "react-icons/io5";
+
 export default function ContactSection() {
   const [form, setForm] = useState({
     name: "",
@@ -39,7 +40,7 @@ export default function ContactSection() {
           className="md:text-3xl md:inline bg-clip-text text-transparent text-2xl content-center justify-center place-content-center font-bold animate__animated animate__flash tracking-tighter sm:text-5xl ease-in-out duration-700 hover:neon-blue transition-all text-sky-500 hover:text-white xl:text-6xl/none"
           style={{
             backgroundImage:
-              'url("./assets/classy-fabric.png"), linear-gradient(to right, #6366f1, #14b8a6)',
+              'url("/assets/classy-fabric.png"), linear-gradient(to right, #6366f1, #14b8a6)',
           }}
         >
           Contact
@@ -50,7 +51,7 @@ export default function ContactSection() {
             className="max-w-[800px] bg-repeat justify-center items-center place-content-center overflow-hidden rounded-xl hover:shadow-neon-indigo transition-all shadow-lg shadow-slate-950 duration-500 text-blue-100 md:text-xl animate__animated animate__fadeIn space-y-4"
             style={{
               backgroundImage:
-                'url("./assets/classy-fabric.png"), linear-gradient(to right, #0284c7, #1e3a8a)',
+                'url("/assets/classy-fabric.png"), linear-gradient(to right, #0284c7, #1e3a8a)',
             }}
           >
             {aboutMe.map((text, index) => (
@@ -71,7 +72,7 @@ export default function ContactSection() {
             
             <div className="flex justify-center gap-4 animate__animated animate__fadeIn">
               <Link
-                href="https://www.facebook.com/yourprofile"
+                href="https://github.com/Tora-Dark"
                 className="inline-flex gap-2 w-12 h-12 md:w-16 md:h-16 items-center justify-center rounded-full bg-primary hover:text-indigo-500 hover:shadow-neon-indigo shadow-slate-950 text-sky-300 text-2xl font-medium hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring transition-all duration-500 ease-in-out"
               >
                 <FaGithub />
@@ -83,7 +84,7 @@ export default function ContactSection() {
                 <Linkedin />
               </Link>
               <Link
-                href="mailto:your.email@example.com"
+                href="mailto:alejandroromeromartinez9@gmail.com"
                 className="inline-flex gap-2 w-12 h-12 md:w-16 md:h-16 items-center justify-center rounded-full bg-primary hover:text-indigo-500 hover:shadow-neon-indigo shadow-slate-950 text-sky-300 text-2xl font-medium hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring transition-all duration-500 ease-in-out"
               >
                 <Mail />
@@ -95,20 +96,20 @@ export default function ContactSection() {
                 <FaTelegramPlane />
               </Link>
             </div>
-            <a className="max-w-[800px] bg-repeat m-5 h-full flex justify-center items-center outline place-content-center overflow-hidden rounded-xl hover:shadow-neon-indigo transition-all shadow-lg shadow-slate-950 duration-500 text-blue-100 md:text-xl animate__animated animate__fadeIn space-y-4" accordion 
+            <a className="max-w-[800px] bg-repeat m-5 h-full flex justify-center items-center outline outline-offset-4 hover:outline-offset-0 place-content-center overflow-hidden rounded-xl hover:shadow-neon-indigo transition-all shadow-lg shadow-slate-950 duration-500 text-blue-100 md:text-xl animate__animated animate__fadeIn space-y-4"  
              style={{
               backgroundImage:
-                'url("./assets/classy-fabric.png"), linear-gradient(to right, #0284c7, #1e3a8a)',
+                'url("/assets/classy-fabric.png"), linear-gradient(to right, #0284c7, #1e3a8a)',
             }}
-             href="/Alejandro_Romero_CV.pdf"
+                href="/cv/Alejandro Romero CV.pdf"
             download>
-              <FaUser className="text-9xl -translate-x-14 "/>
+              <FaUser className="text-9xl -translate-x-14  "/>
               <div
-                href="/Alejandro_Romero_CV.pdf"
-               className="m-5 flex flex-row gap-2 justify-center items-center place-content-center "
+                href="/cv/Alejandro Romero CV.pdf"
+               className="m-5 flex flex-row gap-2 justify-center text-xl hover:animate-pulse h-full items-center place-content-center "
               
               >
-                <IoCloudDownloadSharp/>
+                <IoCloudDownloadSharp className="text-2xl "/>
                 Download CV
               </div>
             </a>
@@ -119,5 +120,5 @@ export default function ContactSection() {
   );
 }
 const aboutMe = [
-  "I am Alejandro Romero, an Engineer in Computer Science with experience in Full Stack web development. I am passionate about coding and always eager to learn new technologies. With a strong background in both frontend and backend development, I am committed to creating efficient and innovative solutions.",
+  "I am Alejandro Romero, an Engineer in Informatic Sciences with experience in Full Stack web development. I am passionate about coding and always eager to learn new technologies. With a strong background in both frontend and backend development, I am committed to creating efficient and innovative solutions.",
 ];

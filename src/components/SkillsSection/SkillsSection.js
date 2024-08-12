@@ -29,6 +29,7 @@ import { TbApi } from "react-icons/tb";
 import { BiSolidGridAlt } from "react-icons/bi";
 import { TbDeviceDesktopStar } from "react-icons/tb";
 import { CheckCircle } from "lucide-react";
+
 const skills = [
   {
     category: "Front-end Development",
@@ -173,7 +174,7 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="w-full py-12 md:py-24 lg:py-32 bg-transparent"
+      className="w-full py-12 md:py-24 md:my-24 lg:py-32 bg-transparent"
     >
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -183,7 +184,7 @@ export default function SkillsSection() {
                 className="md:text-3xl md:inline   bg-clip-text text-transparent text-2xl content-center  justify-center place-content-center font-bold animate__animated animate__flash tracking-tighter sm:text-5xl ease-in-out duration-700 hover:neon-blue transition-all text-sky-500 hover:text-white xl:text-6xl/none"
                 style={{
                   backgroundImage:
-                    'url("./assets/classy-fabric.png"), linear-gradient(to right, #6366f1, #14b8a6)',
+                    'url("/assets/classy-fabric.png"), linear-gradient(to right, #6366f1, #14b8a6)',
                 }}
               >
                 My Skills
@@ -198,54 +199,54 @@ export default function SkillsSection() {
         </div>
         <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-2 md:grid-cols-2 justify-center items-center">
           {skills.map((skill, index) => {
-            const [ref, animationClass] = useScrollAnimation("animate__pulse");
             return (
-              <div
-                key={index}
-                className="flex justify-center items-center w-full"
-              >
-                <Card
-                  ref={ref}
-                  className={`flex flex-col w-full max-w-md md:h-96 h-full p-6  rounded-xl outline outline-blue-600 shadow-slate-950 shadow-xl hover:shadow-neon-blue transition-all duration-700 animate__animated ${animationClass}`}
-                  shadow="sm"
-                  style={{
-                    backgroundImage:
-                      'url("./assets/classy-fabric.png"), linear-gradient(to bottom, #020617,  #172554)',
-                  }}
-                >
-                  <CardHeader className="flex gap-3">
-                    {skill.icon}
-                    <h3 className="text-xl text-sky-500 font-bold">
-                      {skill.category}
-                    </h3>
-                  </CardHeader>
-                  <Divider className="my-4 bg-white" orientation="horizontal" />
-                  <CardBody className="flex-1 flex flex-col ">
-                    <ul className="text-muted-foreground  ">
-                      {skill.technologies.map((tech, techIndex) => (
-                        <li
-                          key={techIndex}
-                          className="flex gap-2  justify-between pb-3 items-center place-content-center text-sky-500"
-                        >
-                          <div className="flex flex-row transition-all   duration-500 ease-in-out hover:text-white gap-2">
-                            <div className="flex flex-row gap-2">
-                              {tech.icon}
-                              <p className="">{tech.name}</p>
-                            </div>
-                          </div>
-                          <div className=" flex justify-center items-center place-content-center">
-                            {renderStars(tech.rating)}
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardBody>
-                </Card>
-              </div>
+              <SkillCard key={index} skill={skill} />
             );
           })}
         </div>
       </div>
     </section>
+  );
+}
+
+function SkillCard({ skill }) {
+  const [ref, animationClass] = useScrollAnimation("animate__pulse");
+
+  return (
+    <div className="flex justify-center items-center w-full">
+      <Card
+        ref={ref}
+        className={`flex flex-col w-full max-w-md md:h-96 h-full p-6  rounded-xl outline outline-blue-600 shadow-slate-950 shadow-xl hover:shadow-neon-blue transition-all duration-700 animate__animated ${animationClass}`}
+        shadow="sm"
+        style={{
+          backgroundImage:
+            'url("/assets/classy-fabric.png"), linear-gradient(to bottom, #020617,  #172554)',
+        }}
+      >
+        <CardHeader className="flex gap-3">
+          {skill.icon}
+          <h3 className="text-xl text-sky-500 font-bold">
+            {skill.category}
+          </h3>
+        </CardHeader>
+        <Divider className="my-4 bg-white" orientation="horizontal" />
+        <CardBody className="flex-1 flex flex-col ">
+          <ul className="text-muted-foreground">
+            {skill.technologies.map((tech, techIndex) => (
+              <li
+                key={techIndex}
+                className="flex gap-2 justify-between pb-3 items-center place-content-center text-sky-500"
+              >
+                <div className="flex flex-row transition-all duration-100 ease-in-out hover:neon-blue hover:text-white">
+                  <span className="font-semibold text-md">{tech.name}</span>
+                  <span className="pl-2">{tech.icon}</span>
+                </div>
+                {renderStars(tech.rating)}
+              </li>
+            ))}
+          </ul>
+        </CardBody>
+      </Card>
+    </div>
   );
 }

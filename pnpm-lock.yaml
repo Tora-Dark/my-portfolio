@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@lordicon/element':
+        specifier: ^1.8.0
+        version: 1.8.0
+      '@lordicon/react':
+        specifier: ^1.8.0
+        version: 1.8.0(lottie-web@5.12.2)(react@18.3.1)
       '@nextui-org/react':
         specifier: ^2.4.6
         version: 2.4.6(framer-motion@11.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)
@@ -41,6 +47,9 @@ importers:
       framer-motion:
         specifier: ^11.2.13
         version: 11.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      lottie-web:
+        specifier: ^5.12.2
+        version: 5.12.2
       lucide-react:
         specifier: ^0.401.0
         version: 0.401.0(react@18.3.1)
@@ -200,6 +209,27 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
+
+  '@lordicon/element@1.8.0':
+    resolution: {integrity: sha512-oEvRQVYXo5mHejJezHv74WLE7zryWML5UWjVAGeeaX4YrMZA0RedpqqJ+FbL0NuUCAV0VQiR51pe8tmps3kFeg==}
+
+  '@lordicon/helpers@1.8.0':
+    resolution: {integrity: sha512-zMrM7hABgOWjBphnaiSg7wE8aAaoi/CO0SQYB06T3F8SDB0DEDfWhbWIHQ//emUSajOb3o+N6IJaGkf9VbTQLg==}
+
+  '@lordicon/react@1.8.0':
+    resolution: {integrity: sha512-Ky7qr5IWO5HEu+umNZAHsMDAKCqDLgQNuqrTUyOJBhWGfAJOil4tVwaOmEezkPJcKem4h8/BKM44vQzB+u/+aQ==}
+    peerDependencies:
+      lottie-react-native: '*'
+      lottie-web: '*'
+      react: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      lottie-react-native:
+        optional: true
+      lottie-web:
+        optional: true
+      react-native:
+        optional: true
 
   '@next/env@14.2.4':
     resolution: {integrity: sha512-3EtkY5VDkuV2+lNmKlbkibIJxcO4oIHEhBWne6PaAp+76J9KoSsGvNikp6ivzAT8dhhBMYrm6op2pS1ApG0Hzg==}
@@ -2361,6 +2391,9 @@ packages:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
     hasBin: true
 
+  lottie-web@5.12.2:
+    resolution: {integrity: sha512-uvhvYPC8kGPjXT3MyKMrL3JitEAmDMp30lVkuq/590Mw9ok6pWcFCwXJveo0t5uqYw1UREQHofD+jVpdjBv8wg==}
+
   lru-cache@10.3.1:
     resolution: {integrity: sha512-9/8QXrtbGeMB6LxwQd4x1tIMnsmUxMvIH/qWGsccz6bt9Uln3S+sgAaqfQNhbGA8ufzs2fHuP/yqapGgP9Hh2g==}
     engines: {node: '>=18'}
@@ -3270,6 +3303,19 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
+
+  '@lordicon/element@1.8.0':
+    dependencies:
+      '@lordicon/helpers': 1.8.0
+
+  '@lordicon/helpers@1.8.0': {}
+
+  '@lordicon/react@1.8.0(lottie-web@5.12.2)(react@18.3.1)':
+    dependencies:
+      '@lordicon/helpers': 1.8.0
+      react: 18.3.1
+    optionalDependencies:
+      lottie-web: 5.12.2
 
   '@next/env@14.2.4': {}
 
@@ -6458,6 +6504,8 @@ snapshots:
   loose-envify@1.4.0:
     dependencies:
       js-tokens: 4.0.0
+
+  lottie-web@5.12.2: {}
 
   lru-cache@10.3.1: {}
 

@@ -5,7 +5,7 @@ export default function Footer() {
     <footer  className="px-4 lg:px-6 bg-slate-950 text-white h-14 flex items-center"
     style={{
       backgroundImage:
-        'url("./assets/classy-fabric.png"), linear-gradient(to left, #020617,  #172554)',
+        'url("/assets/classy-fabric.png"), linear-gradient(to left, #020617,  #172554)',
     }}
   >
       <p className="text-xs text-muted-foreground">
@@ -13,18 +13,18 @@ export default function Footer() {
       </p>
       <nav className="sm:ml-auto flex gap-4 sm:gap-6">
         <Link
-          href="#"
+          href="/work"
           className="text-xs hover:underline underline-offset-4"
           prefetch={false}
         >
-          Privacy
+          work
         </Link>
         <Link
-          href="#"
+          href="/contact"
           className="text-xs hover:underline underline-offset-4"
           prefetch={false}
         >
-          Terms
+          contact
         </Link>
       </nav>
     </footer>

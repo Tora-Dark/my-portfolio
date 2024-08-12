@@ -1,12 +1,14 @@
 "use client";
+import DynamicProjectDisplay from "@/components/DynamicProjectDisplay/DynamicProjectDisplay";
 import Link from "next/link";
-import { CarouselDemo } from "./CarouselDemo";
+/* import { CarouselDemo } from "./CarouselDemo"; */
 /* import Carousel from "../ui/Carousel"; */
 import React, { useState, useEffect } from "react";
-import Carousel from "../ui/CarouselCustom";
-import DynamicProjectDisplay from "../DynamicProjectDisplay/DynamicProjectDisplay";
+/* import Carousel from "../ui/CarouselCustom"; */
+/* import DynamicProjectDisplay from "../DynamicProjectDisplay/DynamicProjectDisplay"; */
 
-export default function WorkSection() {
+
+export default function Work() {
   const [project, setProject] = useState(projects[0]);
 
   useEffect(() => {}, [project]);
@@ -14,7 +16,11 @@ export default function WorkSection() {
   return (
     <section
       id="work"
-      className="w-full py-12 md:py-24 bg-transparent lg:py-32"
+      className="flex flex-col min-h-screen justify-center  items-center px-4 py-8"
+      style={{
+        backgroundImage: 'url("/assets/classy-fabric.png"), linear-gradient(to bottom, #020617, #172554)',
+      }}
+    
     >
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
